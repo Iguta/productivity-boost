@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# Productivity Boost
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, personal productivity web app that combines powerful task management with yearly, monthly, and daily goal setting. It features a beautiful, intuitive UI/UX designed for enjoyment and efficiency.
 
-Currently, two official plugins are available:
+## Overview
+Productivity Boost helps you:
+- Add, edit, delete, view, search, and prioritize tasks (with description, due date, and priority weight).
+- Define New Year resolutions, monthly goals, and daily goals.
+- Track progress weekly, monthly, and yearly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- Vite + React + TypeScript
+- Tailwind CSS for modern, responsive UI
+- Zustand for state management
+- date-fns for date utilities
+- React Testing Library + Vitest for unit tests
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+1) Install dependencies
+```
+npm install
+```
+2) Run locally
+```
+npm run dev
+```
+3) Build
+```
+npm run build
+```
+4) Preview production build
+```
+npm run preview -- --host 127.0.0.1 --port 4175
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
+- Task management: create, edit, delete, mark complete, prioritize, and search
+- Goal setting: yearly resolutions, monthly goals, daily goals
+- Progress tracking: weekly, monthly, yearly summaries
+- Beautiful, responsive UI/UX
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
+- src/
+  - components/: UI components
+  - pages/: top-level screens (Dashboard, Tasks, Goals)
+  - store/: Zustand stores (tasks, goals)
+  - utils/: helpers (date + progress calculations)
+  - test/: testing setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## License
+Personal use.

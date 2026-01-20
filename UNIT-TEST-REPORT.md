@@ -1,7 +1,5 @@
 Unit Test Report
 
-- Date: $(date -Iseconds)
-- Command: npm test --silent
 - Summary: 2 files, 6 tests, 0 failures
 
 Test Suites
